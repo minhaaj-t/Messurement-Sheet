@@ -6,6 +6,10 @@
 
 This is a web application that allows users to input tailor measurements and generate a downloadable PDF. Built with **Next.js**, this app enables users to provide measurement data for garments and download a custom PDF report with the measurements.
 
+[Macbook-Air-messurement-sheet.netlify.app-5vkluilqjncr3x.webm](https://github.com/user-attachments/assets/e3ad118a-64b5-4d3b-87d2-11691cbf141c)
+
+
+
 ## Features
 
 - **Measurement Input Form**: A form to input various measurements (e.g., chest, waist, hip, etc.).
