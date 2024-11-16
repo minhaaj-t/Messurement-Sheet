@@ -224,7 +224,7 @@ export function MeasurementForm() {
             <div className="flex gap-4 ">
               <div className="flex-1">
                 Name:{" "}
-                <span className="border-b border-black w-78 inline-block">
+                <span className="border-b border-black w-60 inline-block">
                   {formData.name}
                 </span>
               </div>
@@ -242,7 +242,7 @@ export function MeasurementForm() {
                   {formData.deliveryTime}
                 </span>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 gap-4">
                 Style (Remark):{" "}
                 <span className="border-b border-black w-80 inline-block">
                   {formData.styleRemark}
@@ -352,6 +352,7 @@ export function MeasurementForm() {
             display: none;
           }
         }
+
         @media print {
           .screen-only {
             display: none;
@@ -359,19 +360,33 @@ export function MeasurementForm() {
           .print-only {
             display: block;
           }
+
           @page {
             margin: 0;
           }
+
           body {
             margin: 0;
             padding: 0;
+            overflow: hidden; /* Prevent scrolling */
           }
+
           .print-container {
             margin: 0;
             padding: 0;
+            page-break-before: always; /* Prevent page breaks before the content */
+            page-break-inside: avoid; /* Avoid page breaks inside the container */
+            max-height: 100vh;
           }
+
           .border-b {
             border-bottom: 1px solid black !important;
+          }
+
+          /* Prevent page break */
+          .no-page-break {
+            page-break-inside: avoid;
+            break-inside: avoid;
           }
         }
       `}</style>
