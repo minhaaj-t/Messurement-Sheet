@@ -205,7 +205,7 @@ export function MeasurementForm() {
 
       {/* Print Layout */}
       <div className="print-only">
-        <div className="w-[297mm] h-[210mm] p-2 bg-white">
+        <div className="w-full h-[210mm] p-0 bg-white print-container">
           {/* Header */}
           <div className="flex justify-between items-start">
             <div className="flex-1">
@@ -221,10 +221,10 @@ export function MeasurementForm() {
           </div>
 
           <div className="mb-4">
-            <div className="flex gap-4">
+            <div className="flex gap-4 ">
               <div className="flex-1">
                 Name:{" "}
-                <span className="border-b border-black w-full inline-block">
+                <span className="border-b border-black w-78 inline-block">
                   {formData.name}
                 </span>
               </div>
@@ -360,17 +360,18 @@ export function MeasurementForm() {
             display: block;
           }
           @page {
-            size: landscape;
             margin: 0;
           }
           body {
             margin: 0;
             padding: 0;
           }
+          .print-container {
+            margin: 0;
+            padding: 0;
+          }
           .border-b {
-            border-bottom-width: 1px !important;
-            border-bottom-style: solid !important;
-            border-bottom-color: black !important;
+            border-bottom: 1px solid black !important;
           }
         }
       `}</style>
